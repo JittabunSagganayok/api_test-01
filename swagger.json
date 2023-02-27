@@ -10,7 +10,7 @@
       "url": "https://github.com/JittabunSagganayok"
     }
   },
-  "host": "localhost:9000",
+  "host": "localhost:4000",
   "basePath": "/",
   "tags": [
     {

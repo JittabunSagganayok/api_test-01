@@ -6,6 +6,7 @@ const errors = require("./middleware/errors.js");
 const swaggerUi = require("swagger-ui-express") , swaggerDocument = require("./swagger.json");
 
 mongoose.Promise = global.Promise;
+mongoose.set("strictQuery", false);
 mongoose
     .connect(MONGO_DB_CONFIG.DB,{
         useNewUrlParser:true,
@@ -19,6 +20,6 @@ app.use("/api",require("./routes/app.routes"));
 app.use(errors.errorHandler);
 app.use("/api-docs", swaggerUi.serve,swaggerUi.setup(swaggerDocument)); 
 
-app.listen(process.env.port || 9000,function(){
+app.listen(process.env.port || 4000,function(){
     console.log("Ready");
 });
