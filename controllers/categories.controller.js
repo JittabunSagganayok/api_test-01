@@ -33,7 +33,7 @@ exports.create = (req, res, next) => {
 };
 
 
-exports.FindAll = (req, res, next) => {
+exports.findAll = (req, res, next) => {
 
     var model = {
         categoryName: req.query.categoryName,
@@ -54,7 +54,7 @@ exports.FindAll = (req, res, next) => {
 
 };
 
-exports.FindOne  = (req, res, next) => {
+exports.findOne  = (req, res, next) => {
 
     var model = {
         categoryId: req.params.id,
